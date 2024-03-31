@@ -4,6 +4,7 @@ import AuthForm from "../components.tsx/AuthForm";
 export default function Home() {
   return (
   <div
+    //background here
     className="
       flex
       min-h-full
