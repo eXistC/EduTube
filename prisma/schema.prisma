@@ -20,7 +20,8 @@ model User {
   hashedPassword String?
   email String? @unique
   profileImage String?
-  bookmark String[] @db.ObjectId
+
+  bookmarkIds String[] @db.ObjectId
   recentlyWatch String? @db.ObjectId
 }
 
