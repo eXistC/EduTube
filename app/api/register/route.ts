@@ -13,7 +13,7 @@ export async function POST(
             name,
             password,
         } = body;
-        
+
         if (!email || !name || !password){
             return new NextResponse('Missing Info', { status: 400 });
         }

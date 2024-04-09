@@ -16,8 +16,10 @@ const AuthForm = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
-
-    }, []);
+        if (session?.status === 'authenticated'){
+            console.log('Authenticated')
+        }
+    }, [session?.status]);
 
     const toggleVariant = useCallback(() => {
         if (variant === 'LOGIN'){
