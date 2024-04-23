@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({
                 fullwidth && "w-full",
                 secondary ? 'text-black' : 'text-white',
                 danger && "bg-rose-500 hover:bg-rose-600 focus-visible:outline-rose-600",
-                !secondary && !danger && "bg-sky-500 hover:bg-sky-600 focus-visible:outline-sky-600"
+                !secondary && !danger && "bg-teal-800 hover:bg-teal-900 focus-visible:outline-teal-800"
             )}
         >
             {children}

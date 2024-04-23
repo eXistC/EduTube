@@ -74,7 +74,6 @@ const AuthForm = () => {
     return (
         <div
             className="
-                mt-8
                 sm:mx-auto
                 sm:w-full
                 sm:max-w-md
@@ -82,10 +81,10 @@ const AuthForm = () => {
         >
             <div
                 className="
-                    bg-zinc-700/50
+                    bg-zinc-700/20
                     px-4
-                    py-8
-                    sm:rounded-lg
+                    pb-8
+                    sm:rounded-b-lg
                     sm:px-10
                 "
             >
@@ -118,7 +117,7 @@ const AuthForm = () => {
                         errors={errors}
                         disabled={isLoading}
                     />
-                    <div>
+                    <div className="bg-primary-500 hover:bg-primary-600">
                         <Button
                             disabled={isLoading}
                             fullwidth

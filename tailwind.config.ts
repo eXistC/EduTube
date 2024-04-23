@@ -16,7 +16,8 @@ const config: Config = {
   plugins: [
     require("@tailwindcss/forms")({
       strategy: 'class'
-    })
+    }),
+    require("tailwindcss-font-inter"), // "font-inter" support
   ],
 };
 

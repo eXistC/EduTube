@@ -22,7 +22,8 @@
     "react-dom": "^18",
     "react-hook-form": "^7.51.1",
     "react-hot-toast": "^2.4.1",
-    "react-icon": "^1.0.0"
+    "react-icon": "^1.0.0",
+    "tailwindcss-font-inter": "^3.0.1"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",

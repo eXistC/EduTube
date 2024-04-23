@@ -33,7 +33,7 @@ const Input: React.FC<InputProps> = ({
                     text-sm
                     font-medium
                     leading-6
-                    text-gray-900
+                    text-neutral-100
                 "
                 htmlFor={id}
                 
@@ -53,16 +53,16 @@ const Input: React.FC<InputProps> = ({
                         rounded-md 
                         border-0 
                         py-1.5 
-                        text-gray-900 
+                        text-neutral-100/60
+                        bg-teal-800/30
                         shadow-sm 
-                        ring-1 
-                        ring-inset 
-                        ring-gray-300 
-                        placeholder:text-gray-400 
+                        placeholder-gray-400 
+                        placeholder-opacity-100
                         focus:ring-2 
                         focus:ring-inset 
-                        focus:ring-sky-600 
-                        sm:text-sm 
+                        focus:ring-teal-800 
+                        font-inter
+                        sm:text-med
                         sm:leading-6`,
                         errors[id] && 'focus:ring-rose-500',
                         disabled && 'opacity-50 cursor-default'
