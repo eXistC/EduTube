@@ -82,10 +82,9 @@ const AuthForm = () => {
         >
             <div
                 className="
-                    bg-white
+                    bg-zinc-700/50
                     px-4
                     py-8
-                    shadow
                     sm:rounded-lg
                     sm:px-10
                 "
@@ -105,7 +104,7 @@ const AuthForm = () => {
                     )}
                     <Input 
                         id="email" 
-                        label="email address"
+                        label="Email address"
                         type="email"
                         register={register}
                         errors={errors}
@@ -135,7 +134,7 @@ const AuthForm = () => {
                         text-sm
                         mt-6
                         px-2
-                        text-gray-500
+                        text-neutral-100/60
                     ">
                         <div>
                             {variant === 'LOGIN' ? 'New to EduTube?' : "Already have an account?"}

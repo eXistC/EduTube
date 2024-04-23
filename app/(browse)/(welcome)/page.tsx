@@ -13,28 +13,21 @@ export default function Home() {
       py-12
       sm:px-6
       lg:px-8
-      bg-gray-600
+      bg-radial-gradient
     "
   >
     <div className="sm:mx-auto sm:w-full sm:max-w-md">
-      <Image 
-        alt="logo"
-        height="48"
-        width="48"
-        className="mx-auto w-auto"
-        src="/assets/logo.png"
-      />
       <h2 
           className="
-            mt-6 
+            mt-0
             text-center 
             text-3xl 
             font-bold 
             tracking-tight 
-            text-slate-300
+            text-neutral-100
           "
         >
-          Sign in to your accout
+          Login
         </h2>
     </div>
     <AuthForm />

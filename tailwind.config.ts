@@ -7,7 +7,11 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'radial-gradient': 'radial-gradient(98.49% 98.49% at 50% 1.51%, #005559 0%, #000 100%)'
+      }
+    },
   },
   plugins: [
     require("@tailwindcss/forms")({
@@ -15,4 +19,5 @@ const config: Config = {
     })
   ],
 };
+
 export default config;
