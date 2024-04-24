@@ -76,20 +76,21 @@ const AuthForm = () => {
             className="
                 sm:mx-auto
                 sm:w-full
-                sm:max-w-md
+                sm:max-w-lg
             "
         >
             <div
                 className="
                     bg-zinc-700/20
                     px-4
-                    pb-8
-                    sm:rounded-b-lg
+                    pb-11
+                    sm:rounded-b-3xl
                     sm:px-10
+                    shadow-lg
                 "
             >
                 <form
-                    className="space-y-6"
+                    className="space-y-5"
                     onSubmit={handleSubmit(onSubmit)}
                 >
                     {variant === 'REGISTER' && (
@@ -117,7 +118,27 @@ const AuthForm = () => {
                         errors={errors}
                         disabled={isLoading}
                     />
-                    <div className="bg-primary-500 hover:bg-primary-600">
+                    <div className="
+                        flex
+                        gap-2
+                        justify-left
+                        text-xs
+                        mt-6
+                        w-5/6
+                        mx-auto
+                        text-neutral-100/60
+                    ">
+                        <div>
+                            {variant === 'LOGIN' ? "Don't have an account?" : "Already have an account?"}
+                        </div>
+                        <div
+                            onClick={toggleVariant}
+                            className="cursor-pointer, text-teal-500"
+                        >
+                            {variant === 'LOGIN' ? 'Create an account' : 'Login'}
+                        </div>
+                    </div>
+                    <div>
                         <Button
                             disabled={isLoading}
                             fullwidth
@@ -125,25 +146,6 @@ const AuthForm = () => {
                         >
                             {variant === "LOGIN" ? "Sign In" : "Register"}
                         </Button>
-                    </div>
-                    <div className="
-                        flex
-                        gap-2
-                        justify-center
-                        text-sm
-                        mt-6
-                        px-2
-                        text-neutral-100/60
-                    ">
-                        <div>
-                            {variant === 'LOGIN' ? 'New to EduTube?' : "Already have an account?"}
-                        </div>
-                        <div
-                            onClick={toggleVariant}
-                            className="underline cursor-pointer"
-                        >
-                            {variant === 'LOGIN' ? 'Create an account' : 'Login'}
-                        </div>
                     </div>
                 </form>
             </div>

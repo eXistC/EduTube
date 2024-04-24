@@ -30,6 +30,8 @@ const Input: React.FC<InputProps> = ({
             <label
                 className="
                     block
+                    w-5/6
+                    mx-auto
                     text-sm
                     font-medium
                     leading-6

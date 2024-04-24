@@ -3,28 +3,33 @@ import AuthForm from "../components.tsx/AuthForm";
 
 export default function Home() {
   return (
+  
   <div
     //background here
     className="
       flex
       min-h-full
       flex-col
-      justify-center
-      py-12
+      justify-top
+      py-48
       sm:px-6
       lg:px-8
       bg-radial-gradient
     "
   >
+
     <div className="sm:mx-auto 
                     sm:w-full 
-                    sm:max-w-md                    
+                    sm:max-w-lg           
                    bg-zinc-700/20
                     px-4
                     pt-8
                     pb-4
-                    sm:rounded-t-lg
-                    sm:px-10">
+                    sm:rounded-t-3xl
+                    sm:px-10
+                    "
+                    >
+
       <h2 
           className="
             mt-0

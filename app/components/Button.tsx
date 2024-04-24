@@ -29,17 +29,18 @@ const Button: React.FC<ButtonProps> = ({
             className={clsx(`
                 flex
                 justify-center
-                rounded-md
+                rounded-lg
                 px-3
-                py-2
+                py-3
                 text-sm
-                font-semibold
+                font-medium
                 focus-visable:outline
                 focus-visable:outline-2
                 focus-visable:outline-offset-2
+                shadow-lg
                 `,
                 disabled && "opacity-50 cursor-default",
-                fullwidth && "w-full",
+                fullwidth && "w-5/12 mx-auto",
                 secondary ? 'text-black' : 'text-white',
                 danger && "bg-rose-500 hover:bg-rose-600 focus-visible:outline-rose-600",
                 !secondary && !danger && "bg-teal-800 hover:bg-teal-900 focus-visible:outline-teal-800"
