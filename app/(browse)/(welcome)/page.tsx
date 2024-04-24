@@ -11,13 +11,32 @@ export default function Home() {
       min-h-full
       flex-col
       justify-top
-      py-48
+      py-32
       sm:px-6
       lg:px-8
       bg-radial-gradient
     "
   >
-
+    <div
+      className="sm:mx-auto 
+                  sm:w-full 
+                  sm:max-w-32
+                  sm:rounded-3xl
+                bg-zinc-600/20
+                  px-2
+                  py-3
+                  mb-8
+                  text-neutral-100
+                  text-center
+                  font-inter
+                  font-semibold
+                  text-xl
+                  shadow-xl
+                    
+      "
+      >
+        Edu.Tube
+      </div>
     <div className="sm:mx-auto 
                     sm:w-full 
                     sm:max-w-lg           
