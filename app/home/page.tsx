@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { signOut } from 'next-auth/react'
 import Button from "@/app/components/Button";
 import useRoutes from '@/hooks/useRoutes';
 
