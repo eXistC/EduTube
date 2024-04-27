@@ -6,10 +6,15 @@ const useRoutes = () => {
   const pathname = usePathname();
   const routes = useMemo(() => [
     {
+      label: 'EDU.Tube',
+      href: '/home',
+      active: pathname === '/home',
+    },
+    {
       label: 'Logout',
       href: '#',
       onClick: () => signOut(),
-    }
+    },
   ], [pathname]);
 
   return routes;

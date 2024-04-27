@@ -1,9 +1,12 @@
+import HomeTopbar from "./HomeTopbar";
+
 async function Topbar({ children }: {
     children: React.ReactNode;
 }) {
     return(
         <div className="h-full">
-            <main className="lg:pt-10 h-full"> {/*Remove it in future*/}
+            <HomeTopbar />
+            <main className="h-full"> {/*Remove it in future*/}
                 {children}
             </main>
         </div>
