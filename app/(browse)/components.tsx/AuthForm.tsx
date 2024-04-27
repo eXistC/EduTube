@@ -133,7 +133,7 @@ const AuthForm = () => {
                         </div>
                         <div
                             onClick={toggleVariant}
-                            className="cursor-pointer, text-teal-500"
+                            className="cursor-pointer text-teal-500"
                         >
                             {variant === 'LOGIN' ? 'Create an account' : 'Login'}
                         </div>
