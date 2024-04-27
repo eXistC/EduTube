@@ -7,7 +7,7 @@ const useRoutes = () => {
   const routes = useMemo(() => [
     {
       label: 'Logout',
-      href: '/',
+      href: '#',
       onClick: () => signOut(),
     }
   ], [pathname]);
