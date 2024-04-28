@@ -3,7 +3,6 @@ import clsx from 'clsx';
 import{
     FieldErrors,
     FieldValues,
-    UseFormRegister
 } from 'react-hook-form';
 
 interface InputProps {
@@ -19,7 +18,6 @@ const Input: React.FC<InputProps> = ({
     label,
     id,
     type,
-    required,
     errors,
     disabled
 }) => {
