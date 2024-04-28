@@ -30,11 +30,11 @@ const HomeItem: React.FC<HomeItemProps> = ({
                     className={clsx(`
                         flex
                         my-4
-                        mx-8
+                        mx-6
                         rounded-3xl
                         px-5
                         py-2
-                        text-l
+                        text-xl
                         text-center
                         font-semibold
                         font-inter
