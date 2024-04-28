@@ -6,7 +6,6 @@ import{
 } from 'react-hook-form';
 
 interface InputProps {
-    label: string;
     id: string;
     type?: string;
     required?: boolean;
@@ -14,8 +13,7 @@ interface InputProps {
     disabled?: boolean;
 }
 
-const Input: React.FC<InputProps> = ({
-    label,
+const Search: React.FC<InputProps> = ({
     id,
     type,
     errors,
@@ -26,7 +24,7 @@ const Input: React.FC<InputProps> = ({
             <label
                 className="
                     block
-                    w-5/6
+                    w-full
                     mx-auto
                     text-sm
                     font-medium
@@ -36,7 +34,6 @@ const Input: React.FC<InputProps> = ({
                 htmlFor={id}
                 
                 >
-                {label}
                 <div className="mt-2">
                     <input
                         id={id}
@@ -47,7 +44,7 @@ const Input: React.FC<InputProps> = ({
                         form-input
                         block 
                         w-full 
-                        rounded-md 
+                        rounded-3xl
                         border-0 
                         py-1.5 
                         text-neutral-100/60
@@ -71,4 +68,4 @@ const Input: React.FC<InputProps> = ({
     );
 }
  
-export default Input
+export default Search
