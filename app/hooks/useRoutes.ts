@@ -6,7 +6,7 @@ const useRoutes = () => {
   const pathname = usePathname();
   const routes = useMemo(() => [
     {
-      label: 'EDU.Tube',
+      label: 'Edu.Tube',
       href: '/home',
       active: pathname === '/home',
     },

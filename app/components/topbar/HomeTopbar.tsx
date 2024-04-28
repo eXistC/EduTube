@@ -19,10 +19,11 @@ const HomeTopbar = () => {
                 <ul
                     role="list"
                     className="
+                        fixed
                         flex
                         flex-row
                         items-center
-                        space-x-1
+                        space-x-
                     "
                 >
                     {route.map((item) =>  (
