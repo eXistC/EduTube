@@ -8,7 +8,7 @@ const SearchBar = () => {
     const { errors } = formState;
 
     return (
-        <div className="flex flex-col items-center space-y-4">
+        <div className="flex flex-col">
             <Search
                 id="search"
                 type="text"

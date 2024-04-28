@@ -26,6 +26,7 @@ const Search: React.FC<InputProps> = ({
                     block
                     w-full
                     mx-auto
+                    max-w-lg
                     text-sm
                     font-medium
                     leading-6
