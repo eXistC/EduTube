@@ -26,7 +26,7 @@ const Search: React.FC<InputProps> = ({
                     block
                     w-full
                     mx-auto
-                    max-w-lg
+                    max-w-2xl
                     text-sm
                     font-medium
                     leading-6
@@ -45,9 +45,9 @@ const Search: React.FC<InputProps> = ({
                         form-input
                         block 
                         w-full 
-                        rounded-3xl
+                        rounded-full
                         border-0 
-                        py-1.5 
+                        py-4
                         text-neutral-100/60
                         bg-teal-800/30
                         shadow-sm 
