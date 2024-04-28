@@ -46,7 +46,7 @@ const Search: React.FC<InputProps> = ({
                         block 
                         w-full 
                         rounded-full
-                        border-0 
+                        border-0
                         py-4
                         text-neutral-100/60
                         bg-teal-800/30
@@ -57,7 +57,8 @@ const Search: React.FC<InputProps> = ({
                         focus:ring-inset 
                         focus:ring-teal-800 
                         font-inter
-                        sm:text-med
+                        text-left
+                        sm:text-xl
                         sm:leading-6`,
                         errors[id] && 'focus:ring-rose-500',
                         disabled && 'opacity-50 cursor-default'
