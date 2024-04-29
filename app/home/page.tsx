@@ -13,7 +13,7 @@ const HomePage = () => {
       <h1 className="text-4xl font-bold font-inter text-center text-white mb-16 -mt-64 whitespace-normal">What would you like to learn today?</h1>
       <SearchBar />
       <div className= "px-80 pt-16">
-      <VideoList data={["test"]} title="SEARCH RESULTS">
+      <VideoList data={["temptest"]} title="SEARCH RESULTS">
         <div className="bg-grey-100"></div>
       </VideoList> 
       </div>
