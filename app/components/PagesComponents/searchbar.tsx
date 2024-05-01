@@ -1,7 +1,6 @@
 'use client';
 
 import axios from 'axios';
-import qs from "query-string"   // Not in Use
 import clsx from 'clsx';
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
