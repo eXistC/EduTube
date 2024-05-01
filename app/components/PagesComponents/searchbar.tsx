@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from 'react-hot-toast';
+import React, { useEffect } from 'react';
 
 interface SearchBarProps {
     onSearch: (results: any[]) => Promise<void>;
@@ -33,7 +34,12 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
             setIsLoading(false);
           }
     }
-
+    useEffect(() => {
+        if (!value) {
+            onSearch([]); 
+        }
+    }, [value]);
+    
     return (
         <form 
             className="flex flex-col"
