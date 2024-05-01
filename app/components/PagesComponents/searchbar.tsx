@@ -1,26 +1,39 @@
 'use client';
 
-import qs from "query-string"
+import axios from 'axios';
+import qs from "query-string"   // Not in Use
 import clsx from 'clsx';
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { toast } from 'react-hot-toast';
 
-const SearchBar = () => {
+interface SearchBarProps {
+    onSearch: (results: any[]) => Promise<void>;
+  }
+
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
     const router = useRouter();
     const [value, setValue] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
-    const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         if (!value){
             return
         }
-        const url =qs.stringifyUrl({
-            url: "#",
-            query: {term:value},
-        },{ skipEmptyString: true});
 
-        router.push(url);
+        setIsLoading(true);
+        
+        try {
+            const response = await axios.post('/api/video', { term: value });
+            onSearch(response.data); // Call the onSearch function with the search results
+          } catch (error) {
+            toast.error('Error: Something went wrong!');
+          } finally {
+            setIsLoading(false);
+          }
     }
 
     return (
@@ -74,3 +87,7 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
+function onSearch(data: any) {
+    throw new Error('Function not implemented.');
+}
+
