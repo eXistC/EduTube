@@ -29,11 +29,11 @@ const VideoList: React.FC<VideoListProps> = ({ data, title }) => {
                 <div className="bg-grey-100"></div>
                 {data.map((item) => (
                     <div key={item.id}>
-                        <h2>{item.title}</h2>
-                        <p>{item.description}</p>
+                        <h2 className = "text-neutral-100 font-inter">{item.title}</h2>
+                        <p className = "text-neutral-100 font-inter">{item.description}</p>
                         <img src={item.thumbnailUrl} alt={item.title} />
-                        <p>Duration: {item.duration}</p>
-                        <a href={item.videoUrl}>Watch Video</a>
+                        <p className = "text-neutral-100 font-inter">Duration: {item.duration}</p>
+                        <a href={item.videoUrl} className = "text-neutral-100 font-inter">Watch Video</a>
                     </div>
                 ))}
             </div>
