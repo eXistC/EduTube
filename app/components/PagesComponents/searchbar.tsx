@@ -34,7 +34,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
             setIsLoading(false);
           }
     }
-    useEffect(() => {
+    useEffect(() => { // Seach bar clear function
         if (!value) {
             onSearch([]); 
         }
