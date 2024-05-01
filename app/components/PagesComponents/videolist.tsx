@@ -3,12 +3,19 @@
 import isEmpty from 'lodash/isEmpty';
 
 interface VideoListProps {
-    data: Record<string, unknown>[];
+    data: {
+        id: string;
+        title: string;
+        description: string;
+        videoUrl: string;
+        thumbnailUrl: string;
+        duration: string;
+    }[];
     title: string;
-    children: React.ReactNode;
+    children?: React.ReactNode;
 }
 
-const VideoList: React.FC<VideoListProps> = ({ data, title, children }) => {
+const VideoList: React.FC<VideoListProps> = ({ data, title }) => {
     if (isEmpty(data)) {
         return null;
     }
@@ -20,9 +27,13 @@ const VideoList: React.FC<VideoListProps> = ({ data, title, children }) => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 <div className="bg-grey-100"></div>
-                {data.map((video, index) => (
-                    <div key={index}>
-                        {children}
+                {data.map((item) => (
+                    <div key={item.id}>
+                        <h2>{item.title}</h2>
+                        <p>{item.description}</p>
+                        <img src={item.thumbnailUrl} alt={item.title} />
+                        <p>Duration: {item.duration}</p>
+                        <a href={item.videoUrl}>Watch Video</a>
                     </div>
                 ))}
             </div>
