@@ -1,6 +1,6 @@
-'use Client';
-
+import React, { useState } from 'react';
 import isEmpty from 'lodash/isEmpty';
+import VideoPlayer from './videoplayer';
 
 interface VideoListProps {
     data: {
@@ -16,9 +16,19 @@ interface VideoListProps {
 }
 
 const VideoList: React.FC<VideoListProps> = ({ data, title }) => {
+    const [videoUrl, setVideoUrl] = useState<string | null>(null);
+
     if (isEmpty(data)) {
         return null;
     }
+
+    const handleClick = (url: string) => {
+        setVideoUrl(url);
+    };
+
+    const handleClose = () => {
+        setVideoUrl(null);
+    };
 
     return (
         <div className="px-4 md:px-64 mt-4 space-y-8">
@@ -32,13 +42,13 @@ const VideoList: React.FC<VideoListProps> = ({ data, title }) => {
                         <p className = "text-neutral-100 font-inter">{item.description}</p>
                         <img src={item.thumbnailUrl} alt={item.title} />
                         <p className = "text-neutral-100 font-inter">Duration: {item.duration}</p>
-                        <a href={item.videoUrl} className = "text-neutral-100 font-inter">Watch Video</a>
+                        <button onClick={() => handleClick(item.videoUrl)} className = "text-neutral-100 font-inter">Watch Video</button>
                     </div>
                 ))}
             </div>
+            <VideoPlayer videoUrl={videoUrl} onClose={handleClose} />
         </div>
     );
-    
 }
 
 export default VideoList;
