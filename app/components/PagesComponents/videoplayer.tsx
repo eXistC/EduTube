@@ -12,10 +12,10 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ videoUrl, onClose }) => {
     }
 
     return ReactDOM.createPortal(
-        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.5)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <div style={{ position: 'relative', width: '80%', height: '80%' }}>
-                <button onClick={onClose} style={{ position: 'absolute', right: 20, top: 20, backgroundColor: 'white' }}>Close</button>
-                <iframe src={videoUrl} style={{ width: '100%', height: '100%' }} frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="relative w-4/5 h-4/5 rounded-lg overflow-hidden">
+                <button onClick={onClose} className="absolute top-5 right-5 bg-white rounded-full p-2 cursor-pointer">X</button>
+                <iframe src={videoUrl} className="w-full h-full" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen></iframe>
             </div>
         </div>,
         document.body
