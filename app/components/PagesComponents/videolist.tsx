@@ -35,7 +35,7 @@ const VideoList: React.FC<VideoListProps> = ({ data, title }) => {
             <h2 className="text-lg font-semibold font-inter text-gray-500">
                 {title}
             </h2>
-            <div className="overflow-auto 
+            <div className="overflow-hidden 
                             grid 
                             grid-cols-1 
                             md:grid-cols-2 
