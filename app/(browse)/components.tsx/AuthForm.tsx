@@ -13,13 +13,13 @@ type Variant = 'LOGIN' | 'REGISTER'
 
 const AuthForm = () => {
     const session = useSession();
-    const router = useRouter();
+    const router = useRouter(); 
     const [variant, setVariant] = useState<Variant>('LOGIN');
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         if (session?.status === 'authenticated'){
-            router.push('/home')
+            router.push('/home') // Rediract to home page if authend
         }
     }, [session?.status ,router]);
 
