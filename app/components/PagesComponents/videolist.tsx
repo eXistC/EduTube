@@ -52,7 +52,7 @@ const VideoList: React.FC<VideoListProps> = ({ data, title }) => {
                                                 flex 
                                                 flex-col">
                         <div onClick={() => handleClick(item.videoUrl)} className="cursor-pointer relative flex-grow">
-                            <img src={item.thumbnailUrl} alt={item.title} className="rounded-lg w-full h-auto" />
+                            <img src={item.thumbnailUrl} alt="https://sirdi-csi.com/wp-content/plugins/penci-portfolio//images/no-thumbnail.jpg" className="rounded-lg w-full h-auto" />
                             <p className="absolute 
                                         bottom-2 
                                         right-2 
