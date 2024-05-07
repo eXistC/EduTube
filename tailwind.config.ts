@@ -9,12 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+        'radial-gradient': 'radial-gradient(98.49% 98.49% at 50% 1.51%, #005559 0%, #000 100%)'
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms")({
+      strategy: 'class'
+    }),
+    require("tailwindcss-font-inter"), // "font-inter" support
+  ],
 };
+
 export default config;

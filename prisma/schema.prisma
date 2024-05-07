@@ -16,11 +16,11 @@ datasource db {
 model User {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String?
-  username String? @unique
   hashedPassword String?
   email String? @unique
   profileImage String?
-  bookmark String[] @db.ObjectId
+
+  bookmarkIds String[] @db.ObjectId
   recentlyWatch String? @db.ObjectId
 }
 
@@ -29,5 +29,6 @@ model Video {
   title String
   description String
   videoUrl String
+  thumbnailUrl String
   duration String
 }
