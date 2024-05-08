@@ -60,7 +60,7 @@ export default function Home() {
             text-neutral-100
           "
         >
-          Login
+          Authorization
         </h2>
         <h3
           className="
